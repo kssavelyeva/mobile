@@ -22,7 +22,7 @@ public class EmptyFieldError extends BaseRunner {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Оставить заявку'])[1]/following::div[2]")).click();
         assertEquals("Укажите ваше ФИО", driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Фамилия, имя и отчество'])[1]/following::div[3]")).getText());
         assertEquals("Необходимо указать номер телефона", driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Контактный телефон'])[1]/following::div[2]")).getText());
-        assertEquals("Для продолжения нужно согласие с условиями", driver.findElement(By.cssSelector("#form-application > div:nth-child(2) > div > div > form > div.ui-form__row.app-form-action-buttons > div > div.ui-form__row.ui-form__row_checkbox._2NQKP.ui-form__row_default-error-view-visible > div > div.ui-form-field-error-message.ui-form-field-error-message_ui-form")).getText());
+        assertEquals("Для продолжения нужно согласие с условиями", driver.findElement(By.cssSelector("#form-application > div:nth-child(2) > div > div > form > div.ui-form__row.app-form-action-buttons > div > div.ui-form__row.ui-form__row_checkbox._2NQKP.ui-form__row_default-error-view-visible > div > div.ui-form-field-error-message.ui-form-field-error-message_ui-form")).getText()); // Для продолжения нужно согласие с условиями chek-box
         assertEquals("Поле обязательное", driver.findElement(By.xpath("(//*[@id=\"form-application\"]/div[2]/div/div/form/div[4]/div/div[2])")).getText());
 
     }
